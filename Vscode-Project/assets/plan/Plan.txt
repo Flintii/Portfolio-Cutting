@@ -1,0 +1,8 @@
+# Navbar
+
+It gives one button, two links and one logo in the navbar. Pretty simple
+
+It have to get good text shadow the design is white and the button need to be colorful like blue at the apple website. 
+
+The links are About and Skills.
+The button has the name 'Get in touch'
