@@ -1,4 +1,4 @@
-###Cutting Project
+# Cutting Project
 
 A small web project where I document my video-editing journey and experiment with building a clean, minimal portfolio website.
 
