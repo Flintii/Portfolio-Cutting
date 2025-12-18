@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
 
 :root {
-  --hightlight-color: #ffbb00;
+  --hightlight-color: #ffffffa1;
   --background-color: #f9f9f9;
   --text-color: #050505;
   --secoundary-text-color: #737373;
   --primary-shadow-color: rgba(222, 222, 222, 0.2);
   --normal-font-size: 16px;
   --heading-font-size: 32px;
-  --small-font-size: 10px;
-  --button-font-size: 12px;
+  --small-font-size: 14px;
+  --button-font-size: 16px;
 }
 
 * {
@@ -85,8 +85,8 @@ body {
 
 .btn1 {
   background-color: var(--text-color);
-  border: none;
-  padding: 8px 10px;
+  border: var(--text-color) 0.5px solid;
+  padding: 10px 14px;
   border-radius: 5px;
   color: white;
   display: inline-flex;
@@ -95,11 +95,15 @@ body {
   margin-left: auto;
   transition: background-color 0.4s ease;
   font-size: var(--button-font-size);
+  font-weight: 520;
   margin-right: 0.5rem;
 }
 
 .btn1:hover {
   background-color: var(--hightlight-color);
+  color: var(--text-color);
+  border: #737373 0.5px solid;
+  transition: background-color .5s ease;
 }
 
 /* Main Section */
