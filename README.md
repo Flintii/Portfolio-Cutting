@@ -2,6 +2,9 @@
 
 A small web project where I document my video-editing journey and experiment with building a clean, minimal portfolio website.
 
+<img width="1888" height="945" alt="image" src="https://github.com/user-attachments/assets/7e3557a6-59de-4fb8-8f6b-e1ec174ad81a" />
+
+
 Goal
 Build a simple platform to showcase the evolution of my editing skills and learn basic web development in the process.
 
@@ -22,3 +25,5 @@ Planned Features / Roadmap
 – Project tags / categories
 – Light/dark mode
 – Cleaner design
+
+
