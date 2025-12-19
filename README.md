@@ -12,7 +12,6 @@ Tech Stack
 – HTML
 – CSS
 – JavaScript
-(Ergänze, was du wirklich nutzt.)
 
 Current Features
 – Static portfolio page
