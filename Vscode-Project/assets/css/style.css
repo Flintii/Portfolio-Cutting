@@ -103,7 +103,7 @@ body {
   background-color: var(--hightlight-color);
   color: var(--text-color);
   border: #737373 0.5px solid;
-  transition: background-color .5s ease;
+  transition: background-color 0.5ds ease;
 }
 
 /* Main Section */
@@ -179,6 +179,66 @@ body {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+}
+
+.typewriter__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter span{
+  position: relative;
+}
+
+.typewriter span::before{
+  content: "You";
+  animation: words 20s infinite;
+}
+
+.typewriter span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--background-color);
+  border-left: 2px solid var(--text-color);
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+    border-left: 2px solid var(--background-color);
+  }
+}  
+
+@keyframes words {
+  0%, 20% {
+    content: "You";
+  }
+  21%, 40% {
+    content: "Brands";
+  }
+  41%, 60% {
+    content: "Influencers";
+  }
+  61%, 80% {
+    content: "Content Creators";
+  }
+  81%, 100% {
+    content: "You";
+  }
+}
+
+@keyframes typing{
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+   
+  }
 }
 
 /* About Section */
@@ -281,11 +341,11 @@ body {
 /* Parallax Effect */
 
 .home-bg {
-  position: fixed;      
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;        
+  height: 100vh;
   background-color: var(--background-color);
   z-index: 0;
   display: flex;
@@ -296,19 +356,19 @@ body {
 .home__container {
   position: relative;
   z-index: 1;
-  transition: transform 0.1s linear; 
+  transition: transform 0.1s linear;
 }
 
-.about-main{
+.about-main {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh; 
+  height: 100vh;
   color: var(--background-color);
 }
 
-.about__textbox{
+.about__textbox {
   color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -316,13 +376,52 @@ body {
   max-width: 500px;
   margin-left: 5rem;
   font-size: 1.1rem;
-  line-height: 1.5rem;  
+  line-height: 1.5rem;
 }
 
 .about__img {
   display: inline;
-  margin-left: 40rem;
+  margin-left: 30rem;
   width: 700px;
   height: auto;
   margin-top: 5rem;
+}
+
+.about__textbox,
+.about__textbox--first {
+  margin-top: 5rem;
+  line-height: 1.4;
+  padding: 44px;
+}
+
+.about__heading{
+  font-weight: 600;
+  font-size: 1.3rem;
+
+  position: relative;
+} 
+
+.realistic-marker-highlight {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-weight: 500;
+  color: #ffffff;
+  z-index: 0;
+  display: inline;
+  box-decoration-break: clone; 
+  -webkit-box-decoration-break: clone;
+}
+
+.realistic-marker-highlight::before {
+  content: "";
+  background-color: #df8805f5;
+  width: 100%;
+  height: 1.3rem;
+  position: absolute;
+  z-index: -1;
+  filter: url(#marker-shape);
+  left: -0.6em;
+  top: -0.025em;
+  padding: 0 0.3em;
 }
