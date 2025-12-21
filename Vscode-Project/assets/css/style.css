@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
 
 :root {
   --hightlight-color: #ffffffa1;
@@ -10,6 +10,9 @@
   --heading-font-size: 32px;
   --small-font-size: 14px;
   --button-font-size: 16px;
+  --heading-font: "Bebas Neue", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+  --accent-font: "DM Mono", monospace;
 }
 
 * {
@@ -187,16 +190,16 @@ body {
   align-items: center;
 }
 
-.typewriter span{
+.typewriter span {
   position: relative;
 }
 
-.typewriter span::before{
+.typewriter span::before {
   content: "You";
   animation: words 20s infinite;
 }
 
-.typewriter span::after{
+.typewriter span::after {
   content: "";
   position: absolute;
   width: calc(100% + 8px);
@@ -204,40 +207,61 @@ body {
   background-color: var(--background-color);
   border-left: 2px solid var(--text-color);
   right: -8px;
-  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
-  to{
+  to {
     border-left: 2px solid var(--background-color);
   }
-}  
+}
 
 @keyframes words {
-  0%, 20% {
+  0%,
+  20% {
     content: "You";
   }
-  21%, 40% {
+  21%,
+  40% {
     content: "Brands";
   }
-  41%, 60% {
+  41%,
+  60% {
     content: "Influencers";
   }
-  61%, 80% {
+  61%,
+  80% {
     content: "Content Creators";
   }
-  81%, 100% {
+  81%,
+  100% {
     content: "You";
   }
 }
 
-@keyframes typing{
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
     width: 0;
   }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
     width: calc(100% + 8px);
-   
   }
 }
 
@@ -267,6 +291,7 @@ body {
   flex-direction: row; /* alles horizontal */
   gap: 20px;
   white-space: nowrap;
+  animation: scroll 30s linear infinite;
 }
 
 .about-headline {
@@ -307,7 +332,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -394,12 +419,12 @@ body {
   padding: 44px;
 }
 
-.about__heading{
+.about__heading {
   font-weight: 600;
   font-size: 1.3rem;
 
   position: relative;
-} 
+}
 
 .realistic-marker-highlight {
   position: relative;
@@ -409,7 +434,7 @@ body {
   color: #ffffff;
   z-index: 0;
   display: inline;
-  box-decoration-break: clone; 
+  box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
