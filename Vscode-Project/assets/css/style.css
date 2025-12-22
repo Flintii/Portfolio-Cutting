@@ -13,6 +13,7 @@
   --heading-font: "Bebas Neue", sans-serif;
   --body-font: "DM Sans", sans-serif;
   --accent-font: "DM Mono", monospace;
+  --btn2-hover-color: #ecebeb;
 }
 
 * {
@@ -36,7 +37,7 @@ body {
   background-color: var(--text-color);
   border: var(--text-color) 0.5px solid;
   padding: 10px 14px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   display: inline-flex;
   align-items: center;
@@ -59,7 +60,14 @@ body {
   cursor: pointer;
   font-size: var(--button-font-size);
   font-weight: 520;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+
+.btn2:hover{
+  background-color: var(--btn2-hover-color);
+  color: rgb(0, 0, 0);
+  transition: background-color 0.4s ease;
 }
 
 /* Header & Navigation */
@@ -120,7 +128,7 @@ body {
   background-color: var(--hightlight-color);
   color: var(--text-color);
   border: #737373 0.5px solid;
-  transition: background-color 0.5ds ease;
+  transition: background-color 0.5s ease;
 }
 
 /* Main Section */
@@ -214,12 +222,16 @@ body {
   white-space: nowrap;
 }
 
-.home__btn1{
+.btn__home{
+  gap: 8px;
+}
 
+.home__btn1{
+  padding: 12px 24px;
 }
 
 .home__btn2{
-  
+  padding: 12px 24px;
 }
 
 .typewriter__container {
