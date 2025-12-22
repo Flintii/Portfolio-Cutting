@@ -32,6 +32,36 @@ body {
   line-height: 1rem;
 }
 
+.btn1 {
+  background-color: var(--text-color);
+  border: var(--text-color) 0.5px solid;
+  padding: 10px 14px;
+  border-radius: 5px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  transition: background-color 0.4s ease;
+  font-size: var(--button-font-size);
+  font-weight: 520;
+  margin-right: 0.5rem;
+}
+
+.btn2{
+  background-color: var(--hightlight-color);
+  color: var(--text-color);
+  border: #737373 0.5px solid;
+  transition: background-color 0.5ds ease;
+  padding: 10px 35px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--button-font-size);
+  font-weight: 520;
+  border-radius: 5px;
+}
+
 /* Header & Navigation */
 .header {
   display: flex;
@@ -86,22 +116,6 @@ body {
   text-decoration: underline;
 }
 
-.btn1 {
-  background-color: var(--text-color);
-  border: var(--text-color) 0.5px solid;
-  padding: 10px 14px;
-  border-radius: 5px;
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  margin-left: auto;
-  transition: background-color 0.4s ease;
-  font-size: var(--button-font-size);
-  font-weight: 520;
-  margin-right: 0.5rem;
-}
-
 .btn1:hover {
   background-color: var(--hightlight-color);
   color: var(--text-color);
@@ -125,10 +139,26 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  background: var(--background-color);
   min-height: calc(100vh - 60px);
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
+
+.home-bg::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../img/background-img-home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
 
 .home__container {
   max-width: 1400px;
@@ -151,7 +181,7 @@ body {
   padding: 0.6rem 1.8rem;
   background: linear-gradient(
     90deg,
-    rgba(255, 111, 0, 0.28) 0%,
+    rgba(255, 111, 0, 0.473) 0%,
     rgba(255, 105, 180, 0.002) 100%
   );
   border-radius: 0;
@@ -182,6 +212,14 @@ body {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+}
+
+.home__btn1{
+
+}
+
+.home__btn2{
+  
 }
 
 .typewriter__container {
