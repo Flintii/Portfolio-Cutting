@@ -13,7 +13,7 @@
   --heading-font: "Bebas Neue", sans-serif;
   --body-font: "DM Sans", sans-serif;
   --accent-font: "DM Mono", monospace;
-  --btn2-hover-color: #ecebeb;
+  --btn2-hover-color: #ebe8e8;
 }
 
 * {
@@ -66,7 +66,7 @@ body {
 
 .btn2:hover{
   background-color: var(--btn2-hover-color);
-  color: rgb(0, 0, 0);
+  color: rgb(20, 20, 20);
   transition: background-color 0.4s ease;
 }
 
@@ -166,8 +166,6 @@ body {
   z-index: -1;
 }
 
-
-
 .home__container {
   max-width: 1400px;
   width: 100%;
@@ -224,6 +222,7 @@ body {
 
 .btn__home{
   gap: 8px;
+  margin-top: 40px;
 }
 
 .home__btn1{
@@ -235,6 +234,9 @@ body {
 }
 
 .typewriter__container {
+  position: absolute;
+  margin-top: 15rem;
+  right: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
