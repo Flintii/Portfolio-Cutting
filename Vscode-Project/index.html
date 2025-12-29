@@ -8,8 +8,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="" />
-  <link rel="shortcut icon" href="../Vscode-Project/assets/img/Tap-img/Flintii-Cover-Icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="shortcut icon" href="/assets/img/Tap-img/Flintii-Cover-Icon.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <span>F</span>
       </div>
 
-      <button class="btn1">contact me</button>
+      <button class="btn1" href="#contact">contact me</button>
 
       <div class="links">
         <ul class="nav__list">
@@ -68,12 +68,15 @@
     <section class="about" id="about">
       <div class="about__main">
         <div class="heading__about">
-          <h1>About <span>me</span></h1>
-          <p class="about__subtitle">Personal video editor crafting clean, engaging edits for shortform and longform
-            content.</p>
+          <h1>About <span class="about__me"><em>me</em></span></h1>
+          <ul class="about__list">
+            <li><strong>Software:</strong> Davinci Resolve</li>
+            <li><strong>Experience:</strong> 1 Year</li>
+            <li><strong>Reach me:</strong> Discord or down <a href="#contact">below</a></li>
+            <li><strong>Price:</strong> 10€/video or more</li>
+          </ul>
         </div>
-        <div class="about__textbox about__textbox--first">
-          <p>
+          <!-- <p>
             <span class="about__heading">Hello,</span>
             <span class="realistic-marker-highlight">I'm Flintii </span> and I
             will cut your videos professionally. I started video editing
@@ -90,28 +93,13 @@
                 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
               </filter>
             </defs>
-          </svg>
+          </svg> -->
         </div>
-        <!-- <div class="img__about">
-            <img src="../Vscode-Project/assets/img/pexels-alexfu-1188751.jpg""
-            alt="" class="about__img" />
-          </div> -->
-        <div class="about__textbox about__textbox--second">
-          <p>
-            I cut videos with DaVinci Resolve, focusing on clean and classic
-            edits that highlight the story. Through personal projects I’ve
-            built a solid foundation and refined my skills with each edit. My
-            approach is professional yet simple, keeping viewers engaged
-            without distractions. Every project is a chance to turn raw
-            footage into something polished and meaningful.
-          </p>
-        </div>
-      </div>
     </section>
   </main>
 
   <script src="assets/js/main.js"></script>
-  <script src="../Vscode-Project/assets/js/preloader.js"></script>
+  <script src="assets/js/preloader.js"></script>
 </body>
 
 </html>
