@@ -81,7 +81,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255,255,255,0.9); /* slightly translucent by default */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* slightly translucent by default */
   position: fixed;
   top: 0;
   left: 0;
@@ -89,7 +90,7 @@ body {
   padding: 0.5rem 1rem;
   z-index: 1000;
   box-shadow: none;
-  border-bottom: 0.5px solid rgba(220,217,217,0.8);
+  border-bottom: 0.5px solid rgba(220, 217, 217, 0.8);
   transition: transform 0.25s ease, background-color 0.25s ease, border-bottom 0.25s ease;
   will-change: transform, background-color;
   -webkit-backdrop-filter: blur(4px);
@@ -258,11 +259,22 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
   background-color: var(--background-color);
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height, 60px));
   border-top: #c0bcbc 0.1px solid;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 1rem 4rem;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  height: 0.5px;
+  background: rgba(192, 188, 188, 0.9);
+  pointer-events: none;
 }
 
 .home-scroll {
@@ -316,12 +328,16 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem 50%;
+  gap: 0.5rem 140%;
   margin: 8rem auto 0;
   padding: 0;
   max-width: 700px;
   width: 100%;
   justify-items: start;
+  position: absolute;
+  left: 10%;
+  bottom: 10rem;
+  z-index: 3;
 }
 
 .about__list li {
@@ -330,7 +346,7 @@ body {
   white-space: nowrap;
 }
 
-.about__list li > a {
+.about__list li>a {
   transition: color 0.3s ease;
 }
 
@@ -346,15 +362,19 @@ body {
 }
 
 .about__desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 18px;
   text-align: center;
-  max-width: 700px;
-  margin: 2rem auto 3rem;
+  max-width: 720px;
+  width: 60%;
+  margin: 0;
   color: rgb(110, 110, 110);
-  position: relative;
-  padding-bottom: 24px;
-  gap: 20px;
-  line-height: 1.5rem;
+  padding: 0 1rem;
+  line-height: 1.6rem;
+  z-index: 2;
 }
 
 .about__list li strong {
@@ -373,19 +393,13 @@ body {
   color: var(--text-color);
 }
 
+/* About image */
 .about__img {
-  display: inline;
-  margin-left: 30rem;
   width: 700px;
+  max-width: 45%;
   height: auto;
-  margin-top: 5rem;
-}
-
-.about__textbox,
-.about__textbox--first {
-  margin-top: 5rem;
-  line-height: 1.4;
-  padding: 44px;
+  border-radius: 25px;
+  flex: 0 0 auto;
 }
 
 .about__heading {
@@ -395,11 +409,87 @@ body {
   position: relative;
 }
 
-.about__img {
-  display: inline;
-  margin-left: 65%;
-  width: 700px;
-  height: auto;
-  margin-top: 5rem;
-  border-radius: 25px;
+.about__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 2rem 0 4rem;
+}
+
+.sozial__links {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  z-index: 3;
+  flex-direction: column;
+}
+
+.sozial__links a {
+  width: 50px;
+  height: 50px;
+  background: #111;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem
+}
+
+.sozial__links a i {
+  color: #fff;
+  font-size: 1.1rem
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .about__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sozial__links {
+    position: static;
+    left: auto;
+    bottom: auto;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .sozial__links a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem
+  }
+
+  .about__desc,
+  .heading__about {
+    position: static;
+    transform: none;
+    margin: 0.5rem 0;
+    text-align: center;
+    width: auto;
+  }
+
+  .about__img {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 1.5rem;
+  }
+
+  .about__textbox {
+    text-align: center;
+    padding: 20px;
+  }
 }
