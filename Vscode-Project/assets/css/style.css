@@ -493,3 +493,237 @@ body {
     padding: 20px;
   }
 }
+
+/* =======================
+   SERVICE SECTION – FINAL
+======================= */
+
+.service {
+  width: 100%;
+  padding: 5rem 0; 
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    145deg,
+    #080808 0%,
+    #111111 50%,
+    #080808 100%
+  );
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+/* Container */
+
+.service__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem; /* mehr Luft */
+  padding-inline: 1.5rem; /* NUR Header & Footer */
+}
+
+
+/* =======================
+   HEADER + LINE
+======================= */
+
+.service__header {
+  width: 100%;
+}
+
+.service__header-top {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.service__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.service__title {
+  font-family: var(--heading-font);
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+/* =======================
+   STEPS GRID
+======================= */
+
+.service__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  gap: clamp(1.8rem, 3vw, 3rem);
+}
+
+.service__steps-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-inline: clamp(2rem, 6vw, 6rem); /* ❗ viel mehr Raum */
+}
+
+
+/* =======================
+   CARDS
+======================= */
+
+.service__card {
+  min-height: 420px; 
+  padding: 3.2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 26px;
+  backdrop-filter: blur(10px);
+
+  transition: transform 0.45s ease, border-color 0.45s ease;
+}
+
+/* OPTIONAL: leichte Staffelung wie im Bild */
+.service__card:nth-child(2) { transform: translateY(18px); }
+.service__card:nth-child(3) { transform: translateY(36px); }
+.service__card:nth-child(4) { transform: translateY(54px); }
+
+.service__card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255,255,255,0.35);
+}
+
+
+/* Card content */
+
+.service__number {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  opacity: 0.45;
+  text-transform: uppercase;
+}
+
+.service__card h3 {
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.service__card p {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+}
+
+/* =======================
+   FOOTER CTA BAR
+======================= */
+
+.service__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.service__footer p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Button Dark Override */
+
+.service__footer .btn1 {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+}
+
+.service__footer .btn1:hover {
+  background-color: #e5e5e5;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 1100px) {
+  .service__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service__card {
+    min-height: 380px;
+  }
+
+  .service__card:nth-child(n) {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .service__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .service__card {
+    min-height: auto;
+    padding: 2.4rem;
+  }
+}
+
+
+.btn-service {
+  padding: 0.85rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 9999px; /* komplett rund */
+  background: #080808;
+  color: #d4d4d4;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  user-select: none;
+  outline-offset: 3px;
+}
+
+.btn-service:hover,
+.btn-service:focus {
+  background: #ffffff;
+  color: #080808;
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.btn-service:active {
+  transform: translateY(0);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
